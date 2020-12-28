@@ -12,6 +12,7 @@
     "node": ">=10"
   },
   "scripts": {
+    "dev": "yarn start",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
     "docz:serve": "docz build && docz serve",

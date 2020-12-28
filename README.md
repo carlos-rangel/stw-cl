@@ -15,14 +15,14 @@ npm install --save shcl
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import MyComponent from 'shcl'
-import 'shcl/dist/index.css'
+import MyComponent from "shcl";
+import "shcl/dist/index.css";
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <MyComponent />;
   }
 }
 ```
