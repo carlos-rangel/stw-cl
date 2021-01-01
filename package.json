@@ -17,6 +17,7 @@
     "docz:build": "docz build",
     "docz:serve": "docz build && docz serve",
     "build": "microbundle-crl --no-compress --format modern,cjs",
+    "plop": "plop",
     "start": "docz dev -o",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
@@ -65,6 +66,11 @@
     "dist"
   ],
   "dependencies": {
-    "docz": "^2.3.1"
+    "clsx": "^1.1.1",
+    "docz": "^2.3.1",
+    "node-sass": "^5.0.0",
+    "plop": "^2.7.4",
+    "react-component-component": "^1.2.1",
+    "sass-loader": "^10.1.0"
   }
 }

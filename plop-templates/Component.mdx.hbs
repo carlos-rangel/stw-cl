@@ -1,0 +1,34 @@
+---
+name: {{componentName}}
+menu: Components
+route: /components-{{camelCase componentName}}
+---
+
+import { Playground, Props } from 'docz';
+import Component from "react-component-component";
+import { {{componentName}} } from '../../src';
+
+# {{componentName}}
+
+```javascript
+import {{componentName}}  from 'mfcl/{{componentName}}';
+```
+
+## Description
+TODO add description here
+
+## Properties
+
+<Props of={ {{~componentName~}} } />
+
+## Basic Usage
+
+<Playground>
+  <Component initialState=\{{}}>
+    {({ setState, state }) => (
+      <{{componentName}}>
+      
+      </{{componentName}}>
+    )}
+  </Component>
+</Playground>
