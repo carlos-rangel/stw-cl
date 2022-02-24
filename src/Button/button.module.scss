@@ -1,0 +1,139 @@
+@import '../variables.scss';
+
+.btn {
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 150px;
+  height: 34px;
+  line-height: 0.75;
+  padding: 0 30px;
+  text-align: center;
+  text-transform: capitalize;
+  transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
+  &.sm {
+    font-size: 14px;
+    height: 30px;
+    padding: 0px 20px;
+    min-width: initial;
+  }
+
+  &.md {
+    font-size: 14px;
+    height: 34px;
+    padding: 0 30px;
+    min-width: initial;
+  }
+
+  &.lg {
+    font-size: 16px;
+    height: 44px;
+    padding: 0 60px;
+  }
+
+  &.rounded {
+    border-radius: 25px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:disabled:not(.link) {
+    background-color: $gray-1;
+    color: $gray-5;
+    border: solid 1px $gray-3;
+  }
+}
+
+.success {
+  background-color: $green;
+  border: solid 1px $green;
+  color: $white;
+
+  &:hover,
+  &:active {
+    background-color: $dark-green;
+    color: $white;
+    border: solid 1px $dark-green;
+  }
+}
+
+.primary {
+  background-color: $purple;
+  border: solid 1px $purple;
+  color: $white;
+
+  &:hover,
+  &:active {
+    background-color: $white;
+    color: $purple;
+    border: solid 1px $purple;
+  }
+
+  &:focus {
+    outline: 1px solid $purple;
+    border: 3px solid $white;
+  }
+}
+
+.secondary {
+  background-color: transparent;
+  border: solid 1px $dark-blue;
+  color: $dark-blue;
+
+  &:hover,
+  &:active {
+    background-color: $dark-blue;
+    color: $white;
+    border: solid 1px $dark-blue;
+  }
+
+  &:focus {
+    outline: 2px solid $dark-blue;
+  }
+}
+
+.tertiary {
+  background-color: transparent;
+  border: solid 1px $gray-11;
+  color: $gray-11;
+
+  &:hover,
+  &:active {
+    border: solid 2px $gray-11;
+  }  
+  
+  &:focus {
+    outline: 1px solid $gray-11;
+  }
+}
+
+.link {
+  background: none;
+  border-radius: 0px;
+  color: $blue;
+  font-weight: 600;
+  line-height: 1.13;
+  width: initial;
+  text-transform: initial;
+  text-decoration: none;
+
+  &:hover, &:active {
+    color: $dark-blue;
+    border: 1px solid $dark-blue;
+  }
+
+  &.dark {
+    color: $white;
+  }
+  &:focus {
+    outline: 2px solid $dark-blue;
+  }
+  &:disabled {
+    color: $gray-5;
+  }
+}

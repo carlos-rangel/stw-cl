@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react'
+import { fireEvent, render } from '@testing-library/react'
 
 import Carousel from './index'
 import React from 'react'
@@ -102,19 +102,12 @@ describe('Carousel Component', () => {
 
   it('should render control style correctly', () => {
     const { container, rerender } = render(
-      <Carousel ariaLabel="test" controlStyle="legacy">
-        <div>One</div>
-        <div>Two</div>
-      </Carousel>
-    )
-    expect(container.querySelector('.carousel-wrapper-control')?.classList).toContain('legacy')
-
-    rerender(
       <Carousel ariaLabel="test" controlStyle="round">
         <div>One</div>
         <div>Two</div>
       </Carousel>
     )
+    
     expect(container.querySelector('.carousel-wrapper-control')?.classList).toContain('round')
 
     rerender(

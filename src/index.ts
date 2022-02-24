@@ -1,7 +1,11 @@
 import Carousel from './Carousel'
 import Input from './Input'
+import Button from './Button';
+import Skeleton from './Skeleton';
 
 export {
-    Input,
-    Carousel
+  Skeleton,
+  Button,
+  Carousel,
+  Input
 }

@@ -1,13 +1,14 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import Input from './index';
 
 describe('Input Component', () => {
   it('renders a className', () => {
-    const { container } = render(
-      <Input className="test-class-name">Click Me</Input>,
+    render(
+      <Input className="test-class-name" value='Click Me' />
     );
-    expect(container.querySelector('.input-wrapper')?.classList).toContain('test-class-name')
+    const input = screen.getByRole('textbox')
+    expect(input?.classList).toContain('test-class-name')
   })
 });

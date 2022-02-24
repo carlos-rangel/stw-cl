@@ -1,7 +1,11 @@
 const resolve = (module) => require.resolve(module)
 
+// get alias ts paths working - https://github.com/doczjs/docz/issues/48
+const TSPathsPlugin = require('tsconfig-paths-webpack-plugin');
+
 // get SASS working
 exports.onCreateWebpackConfig = ({ actions, stage, loaders }) => {
+  
   const { setWebpackConfig } = actions
   const PRODUCTION = stage !== `develop`
   const isSSR = stage.includes(`html`)
@@ -49,6 +53,9 @@ exports.onCreateWebpackConfig = ({ actions, stage, loaders }) => {
   setWebpackConfig({
     module: {
       rules: configRules
+    },
+    resolve: {
+      plugins: [new TSPathsPlugin({ configFile: '../tsconfig.json' })]
     }
   })
 }

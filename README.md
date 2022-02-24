@@ -1,4 +1,4 @@
-# ⚛️ SHCL ⚛️
+# ⚛️ STW-CL ⚛️
 
 > Sogeti Hackathon Component Library
 
@@ -6,13 +6,13 @@
 
 #### Install package
 
-`yarn add shcl`
+`yarn add stw-cl`
 
 ### 👾 Usage
 
 ```tsx
 import React, { Component } from "react";
-import MyComponent from "shcl/MyComponent";
+import MyComponent from "stw-cl/MyComponent";
 
 ...
 

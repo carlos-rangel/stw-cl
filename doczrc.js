@@ -176,7 +176,7 @@ const dark = {
 };
 
 export default {
-  title: "Sogeti Hackathon Component Library",
+  title: "Component Library",
   description:
     "React Component Library for UI consistency between repositories",
   dest: "./docs",
