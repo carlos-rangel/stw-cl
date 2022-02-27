@@ -1,46 +1,29 @@
 {
-  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "allowJs": true,
-    "alwaysStrict": true,
+    "target": "es2015",
+    "moduleResolution": "node",
+    "strict": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": true,
     "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "declaration": true,
     "jsx": "react",
     "lib": [
       "dom",
-      "es2020"
+      "dom.iterable",
+      "esnext"
     ],
+    "allowJs": true,
     "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "preserveConstEnums": true,
-    "removeComments": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strictFunctionTypes": false,
-    "target": "esnext",
-    "strict": false,
-    "isolatedModules": true,
-    "plugins": [
-      {
-        "name": "typescript-plugin-css-modules"
-      }
-    ],
-    "downlevelIteration": true,
-    "allowSyntheticDefaultImports": true
+    "noFallthroughCasesInSwitch": true
   },
+  "extends": "./tsconfig.base.json",
   "include": [
-    "src",
-    "./src/**/*.ts",
-    "./src/**/*.tsx",
-    "testSetup/*.{ts, js}"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
+    "src"
   ]
 }

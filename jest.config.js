@@ -1,4 +1,3 @@
-const { pathsToModuleNameMapper } = require('ts-jest/utils')
 const {
   compilerOptions: { paths }
 } = require('./tsconfig')
@@ -32,19 +31,6 @@ module.exports = {
   transformIgnorePatterns: ['/node_modules/', '^.+\\.module\\.(css|sass|scss)$'],
   modulePaths: ['<rootDir>'],
   moduleDirectories: ['node_modules', 'src', '<rootDir>', '<rootDir>/node_modules', '<rootDir>/src'],
-  moduleNameMapper: {
-    ...pathsToModuleNameMapper(paths),
-    "^~/(.*)": "<rootDir>/src/^$1",
-    '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
-    '^~*/(.*)': '<rootDir>/src/^$1',
-    "~hooks/(.*)": ["<rootDir>/src/hooks/^$1"],
-    "~consts/(.*)": ["<rootDir>/src/consts/^$1"],
-    "~utils/(.*)": ["<rootDir>/src/utils/^$1"],
-    "~components/(.*)": ["<rootDir>/src/components/^$1"],
-    "~styles/(.*)": ["<rootDir>/src/styles/^$1"],
-    "~svg/(.*)": ["<rootDir>/src/svg/^$1"],
-    "~interfaces/(.*)": ["<rootDir>/src/interfaces/^$1"],
-  },
   coverageThreshold: {
     global: {
       branches: 0,

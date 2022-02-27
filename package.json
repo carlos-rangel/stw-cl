@@ -2,15 +2,15 @@
   "name": "stw-cl",
   "version": "1.0.0",
   "private": false,
-  "description": "Sogeti Tech Wizards Component library for UI consistency between repositories",  "author": "CarlosRangel17",
+  "description": "Sogeti Tech Wizards Component library for UI consistency between repositories",
+  "author": "CarlosRangel17",
   "license": "MIT",
   "repository": "carlos-rangel/stw-cl",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "types": "dist/index.d.ts",
   "engines": {
-    "npm" : ">=7.0.0",
-    "node" : ">=14.0.0"
+    "node": ">=12.0.0"
   },
   "scripts": {
     "build:dist": "rimraf dist && node ./scripts/buildDist",
@@ -41,6 +41,8 @@
     "@babel/plugin-proposal-class-properties": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
+    "@emotion/core": "10.1.1",
+    "@emotion/react": "^11.8.1",
     "@popperjs/core": "^2.6.0",
     "@testing-library/jest-dom": "^5.11.3",
     "@testing-library/react": "^10.4.8",
@@ -78,18 +80,8 @@
     "rollup-plugin-typescript2": "^0.27.2",
     "sass-loader": "^10.2.0",
     "ts-jest": "^26.2.0",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
     "typescript": "^3.9.7"
-  },
-  "_moduleAliases": {
-    "~hooks/*": ["src/hooks/*"],
-    "~consts/*": ["src/consts/*"],
-    "~utils/*": ["src/utils/*"],
-    "~components/*": ["src/components/*"],
-    "~styles/*": ["src/styles/*"],
-    "~svg/*": ["src/svg/*"],
-    "~testSetup/*": ["testSetup/*"],
-    "~interfaces/*": ["src/interfaces/*"],
-    "~/*": ["src/*"]
   },
   "jest": {
     "collectCoverageFrom": [
@@ -107,15 +99,33 @@
       "@config/(.*)": "<rootDir>/src/config/$1",
       "@interfaces/(.*)": "<rootDir>/src/interfaces/$1",
       "@services/(.*)": "<rootDir>/src/services/$1",
-      "~hooks/(.*)": ["<rootDir>/src/hooks/$1"],
-      "~consts/(.*)": ["<rootDir>/src/consts/$1"],
-      "~utils/(.*)": ["<rootDir>/src/utils/$1"],
-      "~components/(.*)": ["<rootDir>/src/components/$1"],
-      "~styles/(.*)": ["<rootDir>/src/styles/$1"],
-      "~svg/(.*)": ["<rootDir>/src/svg/$1"],
-      "~testSetup/(.*)": ["testSetup/$1"],
-      "~interfaces/(.*)": ["<rootDir>/src/interfaces/$1"],
-      "~/(.*)": ["<rootDir>/src/$1"]
+      "~hooks/(.*)": [
+        "<rootDir>/src/hooks/$1"
+      ],
+      "~consts/(.*)": [
+        "<rootDir>/src/consts/$1"
+      ],
+      "~utils/(.*)": [
+        "<rootDir>/src/utils/$1"
+      ],
+      "~components/(.*)": [
+        "<rootDir>/src/components/$1"
+      ],
+      "~styles/(.*)": [
+        "<rootDir>/src/styles/$1"
+      ],
+      "~svg/(.*)": [
+        "<rootDir>/src/svg/$1"
+      ],
+      "~testSetup/(.*)": [
+        "testSetup/$1"
+      ],
+      "~interfaces/(.*)": [
+        "<rootDir>/src/interfaces/$1"
+      ],
+      "~/(.*)": [
+        "<rootDir>/src/$1"
+      ]
     }
   }
 }
