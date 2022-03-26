@@ -1,6 +1,6 @@
 # ⚛️ STW-CL ⚛️
 
-> Sogeti Hackathon Component Library
+> Sogeti Tech Wizards Component Library
 
 ## 🚀 Getting started
 
